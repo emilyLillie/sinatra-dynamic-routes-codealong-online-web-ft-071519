@@ -18,7 +18,12 @@ class App < Sinatra::Base
     "Goodbye, #{@user_name}."
   end 
   
-  get '/mulyip'
+  get '/multiply/:number' do 
+    @first_number = params[:number]
+    @second_number = params[:number]
+    product = @first_number * @second_number
+    "#{product}"
+  end 
   
   
 
